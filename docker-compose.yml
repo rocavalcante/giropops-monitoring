@@ -99,7 +99,7 @@ services:
   blackbox:
     image: prom/blackbox-exporter
     volumes:
-      - ./conf/blackbox/:/config
+      - ./conf/blackbox-exporter/:/config
     networks:
       - backend
     ports:

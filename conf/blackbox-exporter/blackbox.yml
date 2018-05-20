@@ -1,0 +1,23 @@
+--- 
+modules: 
+  http_2xx: 
+    http: 
+      method: GET
+      preferred_ip_protocol: ip4
+      protocol: tcp4
+    prober: http
+    timeout: 5s
+  http_post_2xx: 
+    http: 
+      headers: 
+        Content-Type: application/json
+        body: "{}"
+      method: POST
+    prober: http
+    timeout: 5s
+  icmp: 
+    prober: icmp
+    timout: 5s
+  tcp_connect: 
+    prober: tcp
+    timeout: 5s

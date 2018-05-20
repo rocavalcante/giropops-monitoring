@@ -96,6 +96,16 @@ services:
     depends_on:
       - giropops_mongo
 
+  blackbox:
+    image: prom/blackbox-exporter
+    volumes:
+      - ./conf/blackbox/:/config
+    networks:
+      - backend
+    ports:
+      - 9115:9115
+
+
 networks:
   frontend:
   backend:
